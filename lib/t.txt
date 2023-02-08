@@ -1,0 +1,19 @@
+const Padding(
+            padding: EdgeInsets.fromLTRB(10, 30, 0, 0),
+            child: Text(
+              'your smile our passion your life ',
+              style: TextStyle(fontSize: 45),
+              textAlign: TextAlign.start,
+              selectionColor: Colors.grey,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 10, 300, 0),
+            child: TextButton(
+                onPressed: () {},
+                child: Container(
+                  height: 50,
+                  color: Colors.black,
+                  width: 80,
+                )),
+          )
