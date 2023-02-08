@@ -12,7 +12,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'dental clinic',
-      theme: ThemeData(primarySwatch: Colors.brown),
       home: const MyHomePage(title: 'logo'),
     );
   }
@@ -38,71 +37,84 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
           backgroundColor: Colors.black,
         ),
-        body: Column(children: <Widget>[
-          Stack(
-            children: [
-              Padding(
-                  padding: EdgeInsets.fromLTRB(25, 50, 300, 0),
-                  child: Text(
-                    'DENTAL CLINIC ',
-                    style: TextStyle(
-                        fontSize: 35,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey),
-                    selectionColor: Colors.grey,
-                  )),
-              Padding(
-                padding: EdgeInsets.fromLTRB(61, 0, 0, 0),
-                child: Row(
-                  children: <Widget>[
-                    Image(
-                      image: AssetImage('assets/bg.png'),
-                      height: 550,
-                      width: 400,
-                    ),
-                  ],
+        body: Container(
+          color: Color(0xFFFFC107),
+          child: Column(children: <Widget>[
+            Stack(
+              children: [
+                Padding(
+                  padding: EdgeInsets.fromLTRB(61, 25, 0, 0),
+                  child: Row(
+                    children: <Widget>[
+                      Image(
+                        image: AssetImage('assets/bg.jpg'),
+                        height: 550,
+                        width: 400,
+                      ),
+                    ],
+                  ),
                 ),
+                Padding(
+                    padding: EdgeInsets.fromLTRB(5, 50, 300, 0),
+                    child: Text(
+                      'DENTAL  ',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey),
+                      selectionColor: Colors.grey,
+                    )),
+                Padding(
+                    padding: EdgeInsets.fromLTRB(25, 100, 300, 0),
+                    child: Text(
+                      'CLINIC ',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey),
+                      selectionColor: Colors.grey,
+                    )),
+              ],
+            ),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(0, 80, 300, 0),
+              child: Text(
+                'YOUR SMILE.',
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.left,
+                selectionColor: Colors.grey,
               ),
-            ],
-          ),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(0, 80, 300, 0),
-            child: Text(
-              'YOUR SMILE',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              textAlign: TextAlign.left,
-              selectionColor: Colors.grey,
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(10, 0, 300, 0),
-            child: Text(
-              'OUR PASSION',
-              style: TextStyle(fontSize: 25),
-              textAlign: TextAlign.left,
-              selectionColor: Colors.grey,
+            const Padding(
+              padding: EdgeInsets.fromLTRB(10, 0, 300, 0),
+              child: Text(
+                'OUR PASSION.',
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.left,
+                selectionColor: Colors.grey,
+              ),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(10, 0, 300, 0),
-            child: Text(
-              'YOUR LIFE ',
-              style: TextStyle(fontSize: 25),
-              textAlign: TextAlign.left,
-              selectionColor: Colors.grey,
+            const Padding(
+              padding: EdgeInsets.fromLTRB(5, 0, 300, 0),
+              child: Text(
+                'YOUR LIFE .',
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.left,
+                selectionColor: Colors.grey,
+              ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(10, 10, 300, 0),
-            child: TextButton(
-              onPressed: () {},
-              child: Text('Book Now'),
-              style: TextButton.styleFrom(
-                  backgroundColor: Colors.black,
-                  primary: Colors.white,
-                  fixedSize: const Size(200, 10)),
-            ),
-          )
-        ]));
+            Padding(
+              padding: EdgeInsets.fromLTRB(10, 10, 300, 0),
+              child: TextButton(
+                onPressed: () {},
+                child: Text('Book Now'),
+                style: TextButton.styleFrom(
+                    backgroundColor: Colors.black,
+                    primary: Colors.white,
+                    fixedSize: const Size(200, 10)),
+              ),
+            )
+          ]),
+        ));
   }
 }
